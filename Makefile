@@ -1,8 +1,12 @@
 .ONESHELL:
 
 build-backend:
+	@echo "Enter project directory name to create backend:"
+	read PRJNAME; \
+	mkdir $$PRJNAME
+	cd $$PRJNAME
 	@echo "Building node backend..."
-	@npm init -y
+	@npm init 
 	@echo ✔ "Generated package.json file\n------------------------------\n"
 	@npm install typescript @types/node ts-node --save-dev 
 	@echo ✔ "Installed and configured TypeScript\n------------------------------\n"
@@ -15,6 +19,9 @@ build-backend:
 	@echo ✔ "Backend ready\n------------------------------\n"
 
 destroy-backend:
+	@echo "Enter project directory name to destroy:"
+	read PRJNAME; \
+	cd $$PRJNAME
 	@rm -rf node_modules
 	@echo ✔ "Removed node_modules\n------------------------------\n"
 	@rm package.json package-lock.json .eslint* .prettier*

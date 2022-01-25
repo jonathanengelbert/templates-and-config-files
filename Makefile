@@ -29,6 +29,7 @@ destroy-backend:
 	@echo ✔ "Backend successfully removed\n------------------------------\n"
 
 build-express:
+	npm install express
 	@echo ✔ "Express is ready\n------------------------------\n"
 
 react-with-typescript:

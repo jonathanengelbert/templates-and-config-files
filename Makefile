@@ -29,6 +29,9 @@ destroy-backend:
 	@echo ✔ "Backend successfully removed\n------------------------------\n"
 
 build-express:
+	@echo "Please enter path to target directory or press Enter if already in correct directory:\n"
+	read TARGET_DIR; \
+	cd $$TARGET_DIR
 	npm install express
 	@echo ✔ "Express is ready\n------------------------------\n"
 

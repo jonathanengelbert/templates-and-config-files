@@ -3,7 +3,7 @@
 build-backend:
 	@echo "Enter project directory name to create backend:"
 	read PRJNAME; \
-	mkdir $$PRJNAME
+	mkdir -p $$PRJNAME
 	cd $$PRJNAME
 	@echo "Building node backend..."
 	@npm init 

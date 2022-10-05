@@ -8,7 +8,8 @@ build-backend:
 	@echo "Building node backend..."
 	@npm init 
 	@echo ✔ "Generated package.json file\n------------------------------\n"
-	@npm install typescript @types/node ts-node --save-dev 
+	@npm install @types/node ts-node --save-dev 
+	@tsc --init
 	@echo ✔ "Installed and configured TypeScript\n------------------------------\n"
 	@echo ✔ "Installed and configured ESLint\n------------------------------\n"
 	@npm install eslint --save-dev
@@ -16,6 +17,8 @@ build-backend:
 	@npm install --save-dev --save-exact prettier
 	@touch .prettierrc.yaml
 	@echo ✔ "Installed Prettier and added .prettierrc.yaml file\n------------------------------\n"
+	@npm install --save-dev nodemon 
+	@echo ✔ "Installed Nodemon\n------------------------------\n"
 	@echo ✔ "Backend ready\n------------------------------\n"
 
 destroy-backend:
